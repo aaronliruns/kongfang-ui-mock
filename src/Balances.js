@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './Balances.css';
+import RatesGrid from './RatesGrid'; 
 
 class App extends Component {
   render() {
@@ -10,7 +10,9 @@ class App extends Component {
             Acct # : CNYHLX001
           </h3>
           <div className="ui attached raised red segment">
-          <a className="ui red ribbon label">Chinese Yuan</a>
+          <a className="ui red ribbon label">
+          Chinese Yuan
+          </a>
             <div className="ui three column center page grid"> 
               <div className="column">
               </div>
@@ -63,6 +65,8 @@ class App extends Component {
           $49.00
           </h1>
           </div>
+          <div className="ui horizontal divider"/>
+          <RatesGrid/>
           </div>
     );
   }
