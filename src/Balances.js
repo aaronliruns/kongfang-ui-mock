@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Balances.css';
 import RatesGrid from './RatesGrid'; 
+import Conversion from './Conversion';
 
 class App extends Component {
   render() {
@@ -65,9 +66,13 @@ class App extends Component {
           $49.00
           </h1>
           </div>
+          
           <div className="ui horizontal divider"/>
           <RatesGrid/>
+          <div className="ui horizontal divider"/>
+          <Conversion/>
           </div>
+          
     );
   }
 }
