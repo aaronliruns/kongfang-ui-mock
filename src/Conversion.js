@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Conversion = () => (
-    <form class="ui form">
+    <form className="ui form">
         <div className="ui raised centered card">
             <div className="content">
                 <div className="center aligned header">Conversion</div>
