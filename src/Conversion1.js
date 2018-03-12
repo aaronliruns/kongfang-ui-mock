@@ -24,7 +24,7 @@ class Conversion1 extends React.Component  {
 
         return (
             <Form>
-                <Card centered="true" raised="true">
+                <Card centered={true} raised={true}>
                     <Card.Content>
                         <div className="center aligned header">Conversion</div>
                         <div className="center aligned description">
@@ -43,7 +43,7 @@ class Conversion1 extends React.Component  {
                     <div className="extra content">
                         <div className="center aligned author">
                             <Button icon labelPosition="left" type="submit">
-                                <Icon name="paper plane" />
+                                <Icon name="send" />
                                 Submit
                             </Button>
                         </div>
