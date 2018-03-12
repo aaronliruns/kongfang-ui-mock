@@ -1,49 +1,57 @@
 import React from 'react';
+import { Button, Card, Form, Dropdown, Icon } from 'semantic-ui-react'
 
-const Conversion = () => (
-    <form className="ui form">
-        <div className="ui raised centered card">
-            <div className="content">
-                <div className="center aligned header">Conversion</div>
-                <div className="center aligned description">
-                    <div className="field">
-                        <label>From</label>
-                        <div className="ui selection dropdown">
-                            <input type="hidden" name="gender"/>
-                            <i className="dropdown icon"></i>
-                            <div className="default text">Currency</div>
-                            <div className="menu">
-                                <div className="item" data-value="1">Male</div>
-                                <div className="item" data-value="0">Female</div>
-                            </div>
-                        </div>
-                        <input type="text" name="amount" placeholder="0.00"/>
-                    </div>
-                    <div className="field">
-                        <label>To</label>
-                        <div className="ui selection dropdown">
-                            <input type="hidden" name="gender"/>
-                            <i className="dropdown icon"></i>
-                            <div className="default text">Currency</div>
-                            <div className="menu">
-                                <div className="item" data-value="1">Male</div>
-                                <div className="item" data-value="0">Female</div>
-                            </div>
-                        </div>
-                        <input type="text" name="amount" placeholder="0.00"/>
-                    </div>
-                </div>
-            </div>
-            <div className="extra content">
-                <div className="center aligned author">
-                    <button className="ui labeled icon button" type="submit">
-                        <i className="paper plane icon"></i>
-                        Submit
-                    </button>
-                </div>
-            </div>
-        </div>
-    </form>
-);
+class Conversion1 extends React.Component  {
+    render() {
+        const currencies = [
+            {
+                text: 'Chinese Yuan',
+                value: 'CNY',
+                flag: 'china'
+            },
+            {
+                text: 'Philippines Piso',
+                value: 'PHP',
+                flag: 'philippines'
+            },
+            {
+                text: 'US Dollar',
+                value: 'USD',
+                flag: 'us'
+            }
+        ];
 
-export default Conversion;
+
+        return (
+            <Form>
+                <Card centered={true} raised={true}>
+                    <Card.Content>
+                        <div className="center aligned header">Conversion</div>
+                        <div className="center aligned description">
+                            <Form.Field>
+                                <label>From</label>
+                                <Dropdown placeholder='Select Currency' fluid selection options={currencies} />
+                                <input type="text" name="amount" placeholder="0.00"/>
+                            </Form.Field>
+                            <Form.Field>
+                                <label>To</label>
+                                <Dropdown placeholder='Select Currency' fluid selection options={currencies} />
+                                <input type="text" name="amount" placeholder="0.00"/>
+                            </Form.Field>
+                        </div>
+                    </Card.Content>
+                    <div className="extra content">
+                        <div className="center aligned author">
+                            <Button icon labelPosition="left" type="submit">
+                                <Icon name="send" />
+                                Submit
+                            </Button>
+                        </div>
+                    </div>
+                </Card>
+            </Form>
+        );
+    }
+};
+
+export default Conversion1;

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './Balances';
+import App from './Payroll';
 import './semantic/dist/semantic.min.css';
 import registerServiceWorker from './registerServiceWorker';
 

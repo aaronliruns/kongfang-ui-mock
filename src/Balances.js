@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Balances.css';
 import CnyPhpRatesGrid from './CnyPhpRatesGrid';
 import CnyUsdRatesGrid from './CnyUsdRatesGrid';  
-import Conversion1 from './Conversion1';
+import Conversion1 from './Conversion';
 import Modal from 'react-modal';
 
 class App extends Component {
