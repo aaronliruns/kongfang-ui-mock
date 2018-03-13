@@ -1,10 +1,23 @@
-import ReactDataGrid from 'react-data-grid';
 import React from 'react';
-import update from 'immutability-helper';
+import Paytable from './Paytable';
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+import 'react-datepicker/dist/react-datepicker.css';
 
 
 
 class Payroll extends React.Component {
+
+    state = {
+        startDate: moment()
+    };
+
+    handleChange = (date) => (
+        this.setState({
+          startDate: date
+        })
+    );
+  
 
     render() {
         return (
@@ -26,7 +39,7 @@ class Payroll extends React.Component {
                         Please contact customer service for creation of business account
                     </div>
                 </div>
-                <div class="ui horizontal divider">
+                <div className="ui horizontal divider">
                 Balances
                 </div>
                 <div className="ui three cards">
@@ -61,9 +74,33 @@ class Payroll extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div class="ui horizontal divider">
+                <div className="ui horizontal divider">
                 Payroll Spreadsheet
                 </div>
+                <div className="ui center aligned yellow piled segment">
+                <div className="ui grid">
+                <div className="four wide column"></div>
+                <div className="four wide column">
+                <div className="ui message">
+                <DatePicker
+                    selected={this.state.startDate}
+                    onChange={this.handleChange}
+                />
+                </div>
+                </div>
+                <div className="four wide column">
+                <button className="ui big button">
+                    <i className="paper plane icon"/>
+                    Pay
+                </button>
+                </div>
+                <div className="four wide column"></div>
+                </div>
+
+                
+                
+                </div>
+                <Paytable/>
             </div>            
         );
     }
