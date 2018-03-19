@@ -6,7 +6,6 @@ import './Login.css';
 const Login = () => (
     
     <div className="ui middle aligned center aligned grid" id="grid">
-    {console.log(logo)}
     <div className="column" id="column">
         <h2 className="ui grey image header">
         <img src={logo} className="image" id="image" alt="logo"/>
