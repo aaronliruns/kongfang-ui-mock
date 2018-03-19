@@ -5,20 +5,13 @@ const Signup = () => (
     <h1>Register Now</h1>
 
     <div className="ui form segment">   
-        <div className="two fields">
-            <div className="field">
-                <label htmlFor="GivenName">Given Name</label>
-                <input id="GivenName" placeholder="Given Name" type="text" />
-            </div>
-
-            <div className="field">
-                <label htmlFor="Surname">Surname</label>
-                <input id="Surname" placeholder="Surname" type="text"/>
-            </div>
+        <div className="field">
+            <label htmlFor="Fullname">Full Name</label>
+            <input id="Fullname" placeholder="Full Name" type="text" />
         </div>
 
         <div className="inline fields">
-            <label htmlFor="gender">Select your gender:</label>
+            <label htmlFor="gender">Gender</label>
             <div className="field">
             <div className="ui radio checkbox">
                 <input readOnly type="radio" name="gender" checked/>
@@ -55,7 +48,7 @@ const Signup = () => (
 
         <div className="field">
         <label htmlFor="CompanyCode">Company Code</label>
-        <input id="CompanyCode" placeholder="Company Code" type="text" />
+        <input id="CompanyCode" placeholder="Company Code (Optional)" type="text" />
         </div>
 
         <button className="ui red button">Submit</button>
